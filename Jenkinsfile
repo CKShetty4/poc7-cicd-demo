@@ -6,7 +6,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/CKShetty4/demo-app.git'
+                url: 'https://github.com/CKShetty4/poc7-cicd-demo.git'
             }
         }
 
