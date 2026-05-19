@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  become: true
+
+  tasks:
+
+    - name: Stop old container
+      shell: docker rm -f poc7-container || true
+
+    - name: Run new container
+      shell: docker run -d -p 8083:80 --name poc7-container poc7-demo
